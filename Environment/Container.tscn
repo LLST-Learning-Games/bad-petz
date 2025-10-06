@@ -11,7 +11,7 @@
 
 [node name="Bed" parent="." node_paths=PackedStringArray("_bedOwner") instance=ExtResource("2_giy6v")]
 mode = 2
-position = Vector2i(200, 545)
+position = Vector2i(88, 0)
 size = Vector2i(500, 500)
 _bedOwner = NodePath("../Pet")
 

@@ -9,7 +9,12 @@ public partial class Pet : ScreenEntity
     [Export] private float _stopDestinationDistance = 10f;
     [Export] private Vector2 _destination = Vector2.Zero;
 
+    private bool _isWaitingAtLocation = false;
 
+    public void SetIsWaitingAtLocation(bool isWaitingAtLocation) => _isWaitingAtLocation = isWaitingAtLocation;
+    public bool IsWaitingAtLocation => _isWaitingAtLocation;
+    public Vector2 GlobalPosition => _sprite.GlobalPosition;
+    
     public override void _PhysicsProcess(double delta)
     {
         if (_destination != Vector2.Zero
@@ -23,7 +28,8 @@ public partial class Pet : ScreenEntity
         _destination = Vector2.Zero;
         
         Vector2 mousePosition = GetMousePosition();
-        if(mousePosition.DistanceTo(_sprite.GlobalPosition) > _stopCursorDistance 
+        if(!_isWaitingAtLocation 
+           && mousePosition.DistanceTo(_sprite.GlobalPosition) > _stopCursorDistance 
            && !_animationPlayer.IsPlaying())
         {
             MovePetToLoccation(mousePosition);
