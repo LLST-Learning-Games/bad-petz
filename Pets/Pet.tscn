@@ -1,31 +1,234 @@
-[gd_scene load_steps=4 format=3 uid="uid://np3kwhaq5e6v"]
+[gd_scene load_steps=29 format=3 uid="uid://np3kwhaq5e6v"]
 
 [ext_resource type="Script" uid="uid://rm14yentry6u" path="res://Pets/Pet.cs" id="1_hq4n7"]
-[ext_resource type="Texture2D" uid="uid://b7jh2pdjq58fg" path="res://icon.svg" id="2_hk5xb"]
+[ext_resource type="Texture2D" uid="uid://cfm5edjrcp732" path="res://Pets/JumpCatttt.png" id="3_xsg2t"]
+[ext_resource type="Texture2D" uid="uid://jagelil7ty26" path="res://Pets/IdleCattt.png" id="4_hlu5b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbamx"]
+atlas = ExtResource("4_hlu5b")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sjvq"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbxqe"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55bpj"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs75r"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pr8i"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5inhq"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26etw"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrc0h"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayy01"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exkca"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylj8x"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_paoaa"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mduq"]
+atlas = ExtResource("3_xsg2t")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmcro"]
+atlas = ExtResource("4_hlu5b")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvg22"]
+atlas = ExtResource("4_hlu5b")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2w8s"]
+atlas = ExtResource("4_hlu5b")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnug5"]
+atlas = ExtResource("4_hlu5b")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2i16"]
+atlas = ExtResource("4_hlu5b")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qosa5"]
+atlas = ExtResource("4_hlu5b")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya07q"]
+atlas = ExtResource("4_hlu5b")
+region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rqq7x"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_hk5xb")
+"texture": SubResource("AtlasTexture_pbamx")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sjvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbxqe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55bpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs75r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pr8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5inhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26etw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrc0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayy01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exkca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylj8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_paoaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mduq")
+}],
+"loop": false,
+"name": &"happy_react",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmcro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvg22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2w8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnug5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2i16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qosa5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ya07q")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
 }]
 
-[node name="Pet" type="Window" node_paths=PackedStringArray("_sprite")]
+[sub_resource type="Animation" id="Animation_bi3bg"]
+resource_name = "Happy_React"
+length = 0.8
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.6, 0.8), Vector2(1, 1), Vector2(0.6, 0.8), Vector2(1, 1), Vector2(0.6, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pbamx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xsg2t"]
+_data = {
+&"Happy_React": SubResource("Animation_bi3bg"),
+&"RESET": SubResource("Animation_pbamx")
+}
+
+[node name="Pet" type="Window" node_paths=PackedStringArray("_sprite", "_animationPlayer")]
 transparent_bg = true
 mode = 2
 initial_position = 1
 size = Vector2i(500, 500)
 mouse_passthrough_polygon = PackedVector2Array(150, 150, 300, 150, 300, 300, 150, 300)
 borderless = true
+always_on_top = true
 transparent = true
 script = ExtResource("1_hq4n7")
 _sprite = NodePath("AnimatedSprite2D")
-_speed = 2.0
+_animationPlayer = NodePath("AnimationPlayer")
+_happyAnimationKey = "happy_react"
+_speed = 1.8
+_stopDistance = 200.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(150, 150)
 sprite_frames = SubResource("SpriteFrames_rqq7x")
+animation = &"happy_react"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xsg2t")
+}
