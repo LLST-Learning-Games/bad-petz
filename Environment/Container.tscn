@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwog1tlh14o75"]
+
+[ext_resource type="PackedScene" uid="uid://np3kwhaq5e6v" path="res://ScreenEntities/Pets/Pet.tscn" id="1_q5kom"]
+[ext_resource type="PackedScene" uid="uid://e88sws1lbao7" path="res://ScreenEntities/Bed/Bed.tscn" id="2_giy6v"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_q5kom"]
+
+[node name="Container" type="Node2D"]
+
+[node name="Pet" parent="." instance=ExtResource("1_q5kom")]
+
+[node name="Bed" parent="." node_paths=PackedStringArray("_bedOwner") instance=ExtResource("2_giy6v")]
+mode = 2
+position = Vector2i(200, 545)
+size = Vector2i(500, 500)
+_bedOwner = NodePath("../Pet")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 620.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_q5kom")

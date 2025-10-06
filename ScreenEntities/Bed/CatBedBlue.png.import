@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfm5edjrcp732"
-path="res://.godot/imported/JumpCatttt.png-9f296a626b2217b6eb70cd9ec866c023.ctex"
+uid="uid://cjdxn0hm6uywn"
+path="res://.godot/imported/CatBedBlue.png-25d370ee8cc45ee6cc19afef8eb3c88e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pets/JumpCatttt.png"
-dest_files=["res://.godot/imported/JumpCatttt.png-9f296a626b2217b6eb70cd9ec866c023.ctex"]
+source_file="res://ScreenEntities/Bed/CatBedBlue.png"
+dest_files=["res://.godot/imported/CatBedBlue.png-25d370ee8cc45ee6cc19afef8eb3c88e.ctex"]
 
 [params]
 

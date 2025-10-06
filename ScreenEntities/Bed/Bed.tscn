@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://e88sws1lbao7"]
+
+[ext_resource type="Script" uid="uid://digot63h8fohl" path="res://ScreenEntities/Bed/Bed.cs" id="1_3mfh4"]
+[ext_resource type="Texture2D" uid="uid://cjdxn0hm6uywn" path="res://ScreenEntities/Bed/CatBedBlue.png" id="2_thwku"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mk7ti"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_thwku")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bed" type="Window" node_paths=PackedStringArray("_sprite")]
+transparent_bg = true
+size = Vector2i(128, 128)
+borderless = true
+always_on_top = true
+transparent = true
+script = ExtResource("1_3mfh4")
+_sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(297, 529)
+sprite_frames = SubResource("SpriteFrames_mk7ti")
