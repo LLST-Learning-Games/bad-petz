@@ -183,6 +183,7 @@ _happyAnimationKey = "happy_react"
 _speed = 1.6
 _sprite = NodePath("AnimatedSprite2D")
 _animationPlayer = NodePath("AnimationPlayer")
+_startFocused = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x2rbf")
