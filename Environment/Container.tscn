@@ -10,8 +10,9 @@
 transparent_bg = true
 mode = 1
 borderless = true
+always_on_top = true
 transparent = true
-unfocusable = true
+mouse_passthrough = true
 script = ExtResource("1_dregf")
 _screenEntityPrefabs = Array[PackedScene]([ExtResource("2_giy6v"), ExtResource("1_q5kom")])
 
