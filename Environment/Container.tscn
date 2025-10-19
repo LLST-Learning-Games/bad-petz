@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwog1tlh14o75"]
 
-[ext_resource type="Script" uid="uid://bfujnuydh4536" path="res://ScreenEntities/ScreenEntity.cs" id="1_dregf"]
+[ext_resource type="Script" uid="uid://c70kdv3dgu87o" path="res://Environment/Container.cs" id="1_dregf"]
 [ext_resource type="PackedScene" uid="uid://np3kwhaq5e6v" path="res://ScreenEntities/Pets/Pet.tscn" id="1_q5kom"]
 [ext_resource type="PackedScene" uid="uid://e88sws1lbao7" path="res://ScreenEntities/Bed/Bed.tscn" id="2_giy6v"]
 
@@ -10,19 +10,10 @@
 transparent_bg = true
 mode = 1
 borderless = true
-always_on_top = true
 transparent = true
 unfocusable = true
 script = ExtResource("1_dregf")
-
-[node name="Pet" parent="." instance=ExtResource("1_q5kom")]
-
-[node name="Bed" parent="." node_paths=PackedStringArray("_bedOwner") instance=ExtResource("2_giy6v")]
-mode = 2
-position = Vector2i(88, 0)
-size = Vector2i(500, 500)
-always_on_top = false
-_bedOwner = NodePath("../Pet")
+_screenEntityPrefabs = Array[PackedScene]([ExtResource("2_giy6v"), ExtResource("1_q5kom")])
 
 [node name="Control" type="Control" parent="."]
 visible = false

@@ -6,7 +6,9 @@ public partial class ScreenEntity : Window
     [Export] protected AnimatedSprite2D _sprite;  
     [Export] protected AnimationPlayer _animationPlayer;
     [Export] protected float _scale = 3f;
-    [Export] protected bool _startFocused = false;
+    [Export] public string Id { get; private set; }
+    
+    protected Container _container;
     
     public override void _Ready()
     {
@@ -20,18 +22,11 @@ public partial class ScreenEntity : Window
         this.SetTransparentBackground(true);
         DisplayServer.WindowSetFlag(DisplayServer.WindowFlags.Transparent, true);
         SetPassthrough();
-        
-        if(_startFocused)
-        {
-            SetFocused();
-        }
-    }
 
-    private void SetFocused()
-    {
-        // might have to look into this: https://www.reddit.com/r/godot/comments/1i4s2x2/does_window_set_mouse_passthrough_allow_mouse/
-        DisplayServer.WindowMoveToForeground(this.GetWindowId());
     }
+    
+    public void SetContainer(Container container) => _container = container;
+
 
     protected void SetPassthrough()
     {

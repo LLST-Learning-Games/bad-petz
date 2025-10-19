@@ -172,8 +172,7 @@ animations = [{
 [node name="Pet" type="Window" node_paths=PackedStringArray("_sprite", "_animationPlayer")]
 transparent_bg = true
 mode = 2
-initial_position = 1
-size = Vector2i(500, 500)
+size = Vector2i(1024, 1024)
 mouse_passthrough_polygon = PackedVector2Array(150, 150, 300, 150, 300, 300, 150, 300)
 borderless = true
 always_on_top = true
@@ -183,9 +182,10 @@ _happyAnimationKey = "happy_react"
 _speed = 1.6
 _sprite = NodePath("AnimatedSprite2D")
 _animationPlayer = NodePath("AnimationPlayer")
-_startFocused = true
+Id = "Pet"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(18, 20)
 sprite_frames = SubResource("SpriteFrames_x2rbf")
 frame_progress = 0.32622
 
