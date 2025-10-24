@@ -13,7 +13,6 @@
 mode = 2
 position = Vector2i(88, 0)
 size = Vector2i(500, 500)
-always_on_top = false
 _bedOwner = NodePath("../Pet")
 
 [node name="Control" type="Control" parent="."]
