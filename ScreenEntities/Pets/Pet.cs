@@ -14,6 +14,7 @@ public partial class Pet : ScreenEntity
     public void SetIsWaitingAtLocation(bool isWaitingAtLocation) => _isWaitingAtLocation = isWaitingAtLocation;
     public bool IsWaitingAtLocation => _isWaitingAtLocation;
     public Vector2 GlobalPosition => _sprite.GlobalPosition;
+
     
     public override void _PhysicsProcess(double delta)
     {
