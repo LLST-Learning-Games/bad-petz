@@ -265,6 +265,7 @@ animations = [{
 
 [node name="Pet" type="Window" node_paths=PackedStringArray("_sprite", "_animationPlayer")]
 transparent_bg = true
+mode = 2
 size = Vector2i(1024, 1024)
 mouse_passthrough_polygon = PackedVector2Array(150, 150, 300, 150, 300, 300, 150, 300)
 borderless = true

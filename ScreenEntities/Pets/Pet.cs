@@ -61,6 +61,7 @@ public partial class Pet : ScreenEntity
             
             _sprite.SetAnimation(_happyAnimationKey);
             _sprite.Play();
+            SetIsWaitingAtLocation(false);
         }
     }
 
