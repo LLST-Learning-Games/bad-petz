@@ -7,23 +7,66 @@ public partial class Bed : ScreenEntity
     [Export] private Vector2 _bedHomingOffset;
 
     private Vector2 _destination => _sprite.GlobalPosition + _bedHomingOffset;
+    private bool _isBedBeingMoved = false;
     
     public override void _UnhandledInput(InputEvent @event)
     {
         // this is a bit of a hack while we get things working
         _bedOwner ??= _container.GetEntity("Pet") as Pet;
         
-        if (@event is InputEventMouseButton eventMouseButton && eventMouseButton.Pressed)
+        if (@event is InputEventMouseButton eventMouseButton && eventMouseButton.Pressed )
         {
-            if(_bedOwner.GlobalPosition.DistanceTo(_destination) > _waitDistance)
+            
+            if(_isBedBeingMoved)
             {
-                _bedOwner.TryCallPet(_destination);
-                _bedOwner.SetIsWaitingAtLocation(true);
+                StopMoveBed();
+                return;
             }
-            else
+            
+            if (eventMouseButton.ButtonIndex == MouseButton.Left)
             {
-                _bedOwner.SetIsWaitingAtLocation(false);
+                BringCatToBed();
             }
+            else if (eventMouseButton.ButtonIndex == MouseButton.Right)
+            {
+                if(!_isBedBeingMoved)
+                {
+                    StartMoveBed();
+                }
+            }
+        }
+    }
+
+    private void StartMoveBed()
+    {
+        _bedOwner.SetIsWaitingAtLocation(false);
+        _isBedBeingMoved = true;
+    }
+
+    private void StopMoveBed()
+    {
+        _isBedBeingMoved = false;
+    }
+
+    public override void _PhysicsProcess(double delta)
+    {
+        if (_isBedBeingMoved)
+        {
+            _sprite.GlobalPosition = GetMousePosition();
+            SetPassthrough();
+        }
+    }
+
+    private void BringCatToBed()
+    {
+        if (_bedOwner.GlobalPosition.DistanceTo(_destination) > _waitDistance)
+        {
+            _bedOwner.TryCallPet(_destination);
+            _bedOwner.SetIsWaitingAtLocation(true);
+        }
+        else
+        {
+            _bedOwner.SetIsWaitingAtLocation(false);
         }
     }
 }

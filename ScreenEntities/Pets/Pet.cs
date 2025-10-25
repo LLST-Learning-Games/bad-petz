@@ -22,7 +22,7 @@ public partial class Pet : ScreenEntity
             && _destination.DistanceTo(_sprite.GlobalPosition) > _stopDestinationDistance 
             && !_animationPlayer.IsPlaying())
         {
-            MovePetToLoccation(_destination);
+            MovePetToLocation(_destination);
             return;
         }
         
@@ -33,7 +33,7 @@ public partial class Pet : ScreenEntity
            && mousePosition.DistanceTo(_sprite.GlobalPosition) > _stopCursorDistance 
            && !_animationPlayer.IsPlaying())
         {
-            MovePetToLoccation(mousePosition);
+            MovePetToLocation(mousePosition);
         }
         else if (_sprite.GetAnimation() != _happyAnimationKey)
         {
@@ -41,7 +41,7 @@ public partial class Pet : ScreenEntity
         }
     }
 
-    private void MovePetToLoccation(Vector2 mousePosition)
+    private void MovePetToLocation(Vector2 mousePosition)
     {
         Vector2 direction = (mousePosition - _sprite.GlobalPosition).Normalized();
         _sprite.GlobalPosition += direction * _speed;
